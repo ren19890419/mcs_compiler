@@ -1,0 +1,15 @@
+该编译过程不止可以在任意平台上：
+
+1、一些编译参考资源
+http://www.codeproject.com/Articles/330184/How-does-it-work-in-Mono-s-C-compiler
+http://www.codeproject.com/Articles/13434/MONO-an-alternative-for-the-NET-framework
+http://www.codeproject.com/Articles/9407/Introduction-to-Mono-Your-first-Mono-app
+2、其中\mcs_compiler.git\mcs编译器\mcs\build\common\Consts.cs的文件是没有的需要自己包Consts.cs.in改名
+3、Jay工具可以自己编译，使用方法可以参考上面的链接网页
+4、关于cs-parser.cs文件
+很多工程下载的时候都不会自己附带，这个需要自己使用jay工具生成
+jay.exe -ctv < ../jay/skeleton.cs cs-parser.jay > cs-parser.cs
+5、选择Debug或则Release版本进行编译得到mcs.exe
+6、上层的external目录必须附带，编译的时候需要用到里面的一些库文件
+7、Debug - AST编译平台目前编译成功以后不能正常的使用，还需要进一步修改
+
