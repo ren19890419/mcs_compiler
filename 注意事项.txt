@@ -12,4 +12,5 @@ jay.exe -ctv < ../jay/skeleton.cs cs-parser.jay > cs-parser.cs
 5、选择Debug或则Release版本进行编译得到mcs.exe
 6、上层的external目录必须附带，编译的时候需要用到里面的一些库文件
 7、Debug - AST编译平台目前编译成功以后不能正常的使用，还需要进一步修改
+8、程序入口在driver.cs中的int main()函数里面
 
